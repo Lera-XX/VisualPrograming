@@ -1,13 +1,11 @@
-#ifndef POINT_H
-#define POINT_H
+#ifndef COORDINATES_H
+#define COORDINATES_H
 
-class Point {
+class Coordinates {
 public:
-    explicit Point(int x = 0, int y = 0);
-
+    Coordinates(int x = 0, int y = 0);
     int getX() const;
     int getY() const;
-
     void setX(int x);
     void setY(int y);
 
@@ -16,4 +14,4 @@ private:
     int y_;
 };
 
-#endif // POINT_H
+#endif // COORDINATES_H
