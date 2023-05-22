@@ -8,22 +8,18 @@ from selenium.webdriver.common.action_chains import ActionChains
 from bs4 import BeautifulSoup
 from time import sleep
 import csv
-driver = webdriver.Firefox()
+driver = webdriver.Chrome(executable_path="/Users/maxvyatkin/Desktop/chromedriver_mac64/chromedriver")
 center = [55.755864, 37.617698]
 comma = ','
 zoom = '10z'
 target_point = [55.568494, 37.701466]
 i = "i"
 trb = 'trb'
-with open('data.csv', 'w') as file:
-    writer = csv.writer(file)
-    writer.writerow(
-        (
-            'Координаты',
-            'Высота'
-        )
-    )
-for p in range(1, 1000):
+
+
+
+
+for p in range(1, 20):
     url = 'https://votetovid.ru/#' + str(center[0]) + comma + str(center[1]) + comma + zoom + comma + str(target_point[0]) + comma + str(target_point[1]) + i + comma + trb
     driver.get(url)
     sleep(1)
